@@ -6,6 +6,8 @@ package homework.lesson1.part2;
 public class Entertainments {
     public static void main(String[] args) {
         Entertainments en = new Entertainments();
+        en.setTargetGroup("Pentioners");
+        en.setSafe(87.5);
         en.countIncome();
         en.checkAbleLocation();
         en.checkSecurity();
@@ -17,7 +19,7 @@ public class Entertainments {
 
     public String type; // active or not
     public String targetGroup; //old, middle,
-    public boolean safe;
+    public double safe;
     public int numberOfInvolvedPeople;
     public String supportingComponents; // musicInstruments, toys, fireworks, animals in the circle
     public int numOfPeopleInvolved;
@@ -36,11 +38,11 @@ public class Entertainments {
     }
 
     public void selectTargetPeople() {
-        System.out.println("Chose only target zone");
+        System.out.println("Chose only target zone - "+getTargetGroup());
     }
 
     public void checkSecurity() {
-        System.out.println("Be sure that entertainment is secure");
+        System.out.println("Be sure that entertainment is secure or at lease = "+ getSafe()+"%");
     }
 
     public void checkAbleLocation() {
@@ -82,7 +84,7 @@ public class Entertainments {
         this.targetGroup = targetGroup;
     }
 
-    public void setSafe(boolean safe) {
+    public void setSafe(double safe) {
         this.safe = safe;
     }
 
@@ -116,7 +118,9 @@ public class Entertainments {
     //setters finished
 
     //getter started
-
+    public double getSafe() {
+        return safe;
+    }
     public String getType() {
         return type;
     }
@@ -125,7 +129,7 @@ public class Entertainments {
         return targetGroup;
     }
 
-    public boolean isSafe() {
+    public double isSafe() {
         return safe;
     }
 

@@ -4,11 +4,14 @@ package homework.lesson1.part2;
  * Created by apodushkina on 15.12.2016.
  */
 public class Applications {
+
+
     public static void main(String[] args) {
         Applications app = new Applications();
+        app.setActive(true);
+        app.setAutoInstallation(true);
         app.start();
         app.showData();
-        app.setAutoInstallation(true);
         app.update();
         app.stop();
 
@@ -24,10 +27,11 @@ public class Applications {
     private int amountOfUsers; // maintain simultaniously
     private boolean free;
     private double prevalencePercentage; // how many users are using it
+    private boolean newVersion;
 
     //mothods started
-    private boolean start() {
-        if (active == true) {
+    public boolean start() {
+        if (getActive() == true) {
             return active;
         } else {
             System.out.println("Please turn App on!");
@@ -36,11 +40,18 @@ public class Applications {
     }
 
     private void stop() {
-        System.out.println("The app was stopped and closed!");
+        System.out.println("The app was stopped and closed! ");
     }
 
-    private void update() {
-        System.out.println("The app was updated to the latest version");
+    private void update()
+    {
+
+        if (isAutoInstallation()==true && isNewVersion()==true) {
+            System.out.println("The app was updated to the latest version");
+        }
+        else{
+            System.out.println("Investiagtion is needed for update");
+        }
     }
 
     private void showData() {
@@ -132,6 +143,14 @@ public class Applications {
 
     public void setPrevalencePercentage(double prevalencePercentage) {
         this.prevalencePercentage = prevalencePercentage;
+    }
+
+    public boolean getActive() {
+        return active;
+    }
+
+    public boolean isNewVersion() {
+        return newVersion;
     }
 
     // setters finished

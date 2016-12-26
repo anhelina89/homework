@@ -6,10 +6,13 @@ package homework.lesson1.part2;
 public class MusicInstruments {
     public static void main(String[] args) {
         MusicInstruments mi = new MusicInstruments();
+        mi.setPower(true);
+        mi.setPortability(true);
         mi.startPlay();
         mi.startPlay();
         mi.repare();
         mi.checkPortability();
+        mi.stop();
 
     }
 
@@ -23,13 +26,19 @@ public class MusicInstruments {
     public double weight;
     private String originCountry;
     private int age;
+    private boolean power;
 
     //methods started
-    public void startPlay(){
-        System.out.println("Turn the instrument on and play music");
+    public void startPlay() {
+        if (isPower() == true) {
+            System.out.println("Turn the instrument on and play music");
+        } else {
+            System.out.println("Turn on elextricity");
+        }
     }
     public void stop(){
         System.out.println("Stop playing music and turn the instrument off");
+        setPower(false);
     }
     public void repare(){
         System.out.println("Be sure that the details can be substituted");
@@ -42,7 +51,7 @@ public class MusicInstruments {
         }
     }
      public void checkPortability(){
-         if (portability==true){
+         if (isPortability()==true){
              System.out.println("This music instrument is portable");
          }
          else{
@@ -93,6 +102,9 @@ public class MusicInstruments {
     public int getAge() {
         return age;
     }
+    public boolean isPower() {
+        return power;
+    }
     //getters finished
 
     //setters started
@@ -134,6 +146,10 @@ public class MusicInstruments {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setPower(boolean power) {
+        this.power = power;
     }
     //setters finished
 

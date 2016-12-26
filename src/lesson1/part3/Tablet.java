@@ -49,7 +49,7 @@ public class Tablet extends TouchScreenDevices {
         }
     }
     public void synchronizeData(){
-        if (newPhotos==true){
+        if (isNewPhotos()==true){
             sendPhoto();
         }
         else{

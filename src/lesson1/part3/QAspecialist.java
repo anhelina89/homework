@@ -11,29 +11,40 @@ public class QAspecialist extends WorkerOfCompany{
     public QAspecialist() throws IOException {}
         public static void main (String[]args) throws IOException {
             QAspecialist qa = new QAspecialist();
-            qa.name = "Bob";
-            qa.position = "Senior";
-            qa.experienceYears = 8;
+            qa.setName("Bob");
+            qa.setPosition("Senior");
+            qa.setExperienceYears(8);
             qa.setAge(28);
             qa.setSex("male");
+            qa.setSpeciality("QA");
             qa.setPoliteness(true);
+            qa.setRealWorkingHourse(5);
             qa.makeGoodJob();
             qa.setRealWorkingHourse(5);
             qa.countPerformanceAtWork();
-            System.out.println("Please check disk D:/ and find a file employeeInfo.txt with information about Bob");
+            String text = "Employee info: \n "
+                    +"name - " + qa.getName()+ "\n "
+                    +"sex - "+ qa.getSex()+ " \n "
+                    +"position - "+qa.getPosition()+" \n "
+                    +"experience in the " +qa.getSpeciality() +" - "+qa.getExperienceYears()+" years";
+            System.out.println("Please check "+getFileName()+" with information about "+qa.getName());
 
             QAspecialist.write(fileName, text);
 
         }
+
+
 
     private String name;
     private String position;
     private String speciality;
     private int experienceYears;
     private boolean sertifiedSpecialist;
-    private static int manHoursPerDay = 6;
+    private static int manHoursPerDay=8;
+
     private int realWorkingHourse;
-    private static String text = "Employee info: \n name - Bob \n position - senior \n experienceYears - 8 years";
+
+
     private static String fileName = "D:\\employeeInfo.txt";
 
     public static void write(String fileName, String text) {
@@ -57,7 +68,7 @@ public class QAspecialist extends WorkerOfCompany{
 
     @Override
     public void countPerformanceAtWork() {
-        double p=(this.realWorkingHourse*100)/this.manHoursPerDay;
+        double p=(getRealWorkingHourse()*100)/this.manHoursPerDay;
         System.out.println("Real performance is - "+p+"%");
     }
     @Override
@@ -74,4 +85,56 @@ public class QAspecialist extends WorkerOfCompany{
     public int getRealWorkingHourse() {
         return realWorkingHourse;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
+    public void setExperienceYears(int experienceYears) {
+        this.experienceYears = experienceYears;
+    }
+
+    public void setSertifiedSpecialist(boolean sertifiedSpecialist) {
+        this.sertifiedSpecialist = sertifiedSpecialist;
+    }
+    public static void setManHoursPerDay(int manHoursPerDay) {
+        QAspecialist.manHoursPerDay = manHoursPerDay;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public int getExperienceYears() {
+        return experienceYears;
+    }
+
+    public boolean isSertifiedSpecialist() {
+        return sertifiedSpecialist;
+    }
+
+    public static int getManHoursPerDay() {
+        return manHoursPerDay;
+    }
+    public static String getFileName() {
+        return fileName;
+    }
+
+
 }

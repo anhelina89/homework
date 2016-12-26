@@ -10,21 +10,25 @@ public class MobilePhone extends TouchScreenDevices {
     public static void main(String[] args) {
         MobilePhone mob1 = new MobilePhone();
         mob1.ableInstallApps=true;
+        mob1.setMicrophone(true);
+        mob1.setKeyBoardType("Sensor");
+        mob1.setMaxNumberOfCallRecords(850);
         mob1.cleanCash();
         mob1.checkInstallation(true);
 
     }
 
     //new variables
-    private String keyBoardType = "sensor";
-    public static boolean microphone = true;
-    private int numberOfMsg=25;
-    private int numberOfCallRecords;
+    private String keyBoardType;
+    private boolean microphone;
+    private int maxNumberOfCallRecords;
+    private int numberOfMsg;
 
 
     //new methods
     private void takeCall() {
         System.out.println("check the ability to make a call");
+
     }
     private void takeMsg(boolean msg) {
         if (msg==true){
@@ -36,7 +40,7 @@ public class MobilePhone extends TouchScreenDevices {
     private void checkPhoneForTourist(){
         System.out.println("Mobile for tourists should have following charachteristics:");
     }
-    private void countMsg(int numberOfMsg){
+    private void cleanerOfMsg(){
             System.out.println("Cash will be cleaned in 5 sec ... ");
             try {
                 Thread.sleep(5000);
@@ -45,7 +49,7 @@ public class MobilePhone extends TouchScreenDevices {
             }
     }
     private void cleanCash(){
-        countMsg(numberOfMsg);
+        cleanerOfMsg();
         System.out.println("Cash was cleaned");
     };
     public void setKeyBoardType(String keyBoardType) {
@@ -75,5 +79,33 @@ public class MobilePhone extends TouchScreenDevices {
         return super.isInternet3G4GSupport();
     }
 
+    public String getKeyBoardType() {
+        return keyBoardType;
+    }
 
+    public boolean isMicrophone() {
+        return microphone;
+    }
+
+    public int getNumberOfMsg() {
+        return numberOfMsg;
+    }
+
+    public int getMaxNumberOfCallRecords() {
+        return maxNumberOfCallRecords;
+    }
+
+
+
+    public void setMicrophone(boolean microphone) {
+        this.microphone = microphone;
+    }
+
+    public void setNumberOfMsg(int numberOfMsg) {
+        this.numberOfMsg = numberOfMsg;
+    }
+
+    public void setMaxNumberOfCallRecords(int maxNumberOfCallRecords) {
+        this.maxNumberOfCallRecords = maxNumberOfCallRecords;
+    }
 }

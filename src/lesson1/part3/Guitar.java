@@ -12,22 +12,25 @@ public class Guitar extends MusicInstruments {
         Guitar g1=new Guitar();
         g1.setWeight(3.7);
         g1.setSize(120);
+        g1.setSound("la la la");
         g1.setType("electric");
         System.out.println("Parameters of this guitar:\n"+"weight - "+ g1.getWeight()+ "kg"+"\n" + "size - "+g1.getSize()+"cm"+"\n"+"type - "+g1.getType());
         System.out.println("If you want ot test it, please answer a following question, then get the instruction or lesten to default test music:\n");
-        g1.turnOnElectricity(true);
+        g1.turnOnElectricity();
 
     }
 
     private static int strings = 7;
     private int price = 150;
+    private String sound;
+
 
 
     private void makeSound() {
-        System.out.println("la-la-la");
+        System.out.println(getSound());
     }
 
-    private void turnOnElectricity(boolean power) {
+    private void turnOnElectricity() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Is power is on ? ");
         System.out.print("Enter:\n 1=true \n 0=false\n");
@@ -65,4 +68,19 @@ public class Guitar extends MusicInstruments {
         return strings;
     }
 
+    public static void setStrings(int strings) {
+        Guitar.strings = strings;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
+
+    public String getSound() {
+        return sound;
+    }
 }

@@ -6,7 +6,11 @@ package homework.lesson1.part2;
 public class Languages {
     public static void main(String[] args) {
         Languages lng = new Languages();
-        lng.checkIsNotExtinct(100);//default value
+        lng.setNumOfPeople(3600);
+        lng.setAveregeNumofWords(1200000);
+        lng.setUsedInTheWorld(12.8);
+        lng.setDifficultyByGrammar("Primitive");
+        lng.checkIsNotExtinct();
         lng.checkSpellingAbility();
         lng.getUsedInTheWorld();
         lng.estimateHardnessToLearn();
@@ -23,6 +27,7 @@ public class Languages {
     private String type; //a sign language or regular
     private int amountOfSinonims;
     private int numOfLetters;
+    private int numOfPeople;
 
     //methods started
     public void countWord() {
@@ -31,28 +36,34 @@ public class Languages {
     }
 
     public void checkUsageInWorld() {
-        System.out.println("Check how many words is enough for ordinary well-educated persone");
-        getUsedInTheWorld();
+        System.out.println("This language is used by " + getUsedInTheWorld() +"% of people in the World");
+
     }
 
     public void estimateHardnessToLearn() {
         System.out.println("Estimate how is it difficult to learn this particular language. Compare with Engkish");
-        getDifficultyByGrammar();
+        System.out.println("Be sure that average Number of words in this language is - " +getAveregeNumofWords());
     }
 
     public void estimateGrammar() {
-        System.out.println("Estimate how is it difficult to the grammar of this particular language. Compare with Engkish");
-        getDifficultyByGrammar();
+        if (getDifficultyByGrammar() == "Middle") {
+            System.out.println("The grammar of this language is simple enough");
+        } else {
+            System.out.println(getDifficultyByGrammar());
+        }
     }
-
     public void checkSpellingAbility() {
-        System.out.println("Is it possible to spell all words like in English");
-        isSpelling();
+        if (isSpelling()==true) {
+            System.out.println("Is it possible to spell all words like in English");
+        }
+        else{
+            System.out.println("Is it IMpossible to spell all words like in English");
+        }
     }
 
-    public void checkIsNotExtinct(int numOfPeople) {
+    public void checkIsNotExtinct() {
         System.out.println("Check how many people are using this language in the world");
-        if (numOfPeople>1000) {
+        if (getNumOfPeople()>1000) {
             allive = true;
         }    else{
             System.out.println("language dies out");
@@ -114,6 +125,11 @@ public class Languages {
     public int getAmountOfSinonims() {
         return amountOfSinonims;
     }
+
+    public int getNumOfPeople() {
+        return numOfPeople;
+    }
+
     //getters finished
 
     //setter started
@@ -152,8 +168,12 @@ public class Languages {
     public void setAmountOfSinonims(int amountOfSinonims) {
         this.amountOfSinonims = amountOfSinonims;
     }
-
+    public void setNumOfPeople(int numOfPeople) {
+        this.numOfPeople = numOfPeople;
+    }
     //setter finished
+
+
 
 
 }

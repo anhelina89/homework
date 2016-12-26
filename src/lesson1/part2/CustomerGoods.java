@@ -8,6 +8,12 @@ public class CustomerGoods {
 
     public static void main(String[] args) {
         CustomerGoods cg= new CustomerGoods();
+        cg.setTea(30);
+        cg.setWater(1);
+        cg.setSalt(20);
+        cg.setPotato(6);
+        cg.setCoffee(50);
+        cg.setSugar(80);
         cg.prepareDinner();
     }
 
@@ -41,7 +47,7 @@ public class CustomerGoods {
     public void prepareTeaCup() {
         checkWater();
         addSugar();
-        System.out.println("Be sure that tea was added and enjoy your tea");
+        System.out.println("Be sure that "+getTea()+" gr of tea was added and enjoy your tea");
     }
 
     public void buy() {
@@ -62,23 +68,23 @@ public class CustomerGoods {
     }
 
     public void checkWater() {
-        System.out.println("There is a water inside.");
+        System.out.println("There is a "+ getWater()+" litrs of water inside.");
     }
 
     public void addSalt() {
-        System.out.println("Add salt as was described in the recipe");
+        System.out.println("Add "+ getSalt()+" gr of salt as was described in the recipe");
     }
 
     public void addSugar() {
-        System.out.println("Add 2 spoons of sugar to each cup");
+        System.out.println("Add "+getSugar()+ " gr of sugar to each cup");
     }
 
     public void cutPotato() {
-        System.out.println("Cut the potatoes into 6 parts");
+        System.out.println("Cut "+getPotato()+ " potatoes into 6 parts");
     }
 
     public void grindCoffee() {
-        System.out.println("Grin your coffe");
+        System.out.println("Grin "+getCoffee()+ " gr of coffe");
     }
 
     public void selectBread() {
@@ -86,7 +92,7 @@ public class CustomerGoods {
     }
 
     public void boilWater(){
-        System.out.println("Water is 100 C");
+        System.out.println("We have " +getWater()+" of water with 100 C");
     }
     //my methods finished
 
