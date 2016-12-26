@@ -19,6 +19,7 @@ public abstract class TouchScreenDevices {
 
     //methods started
     private void countPerformance() {
+        System.out.println("Count perfrmance: "+ getPerformance());
     }
 
     private void selectBigHardDisks() {

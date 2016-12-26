@@ -5,6 +5,7 @@ import java.io.*;
 
 /**
  * Created by Angelina on 20.12.2016.
+
  */
 public class QAspecialist extends WorkerOfCompany{
     public QAspecialist() throws IOException {}

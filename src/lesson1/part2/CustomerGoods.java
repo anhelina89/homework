@@ -5,6 +5,12 @@ package homework.lesson1.part2;
  */
 public class CustomerGoods {
 
+
+    public static void main(String[] args) {
+        CustomerGoods cg= new CustomerGoods();
+        cg.prepareDinner();
+    }
+
     //food related
     private int meet;
     private int egg;
@@ -28,34 +34,59 @@ public class CustomerGoods {
 
 
     //my methods started
-    public void countMeet(int nuOfPersons, double weightPerPerson) {
+    public double countMeet(int nuOfPersons, double weightPerPerson) {
+        return  nuOfPersons*weightPerPerson;
     }
 
     public void prepareTeaCup() {
+        checkWater();
+        addSugar();
+        System.out.println("Be sure that tea was added and enjoy your tea");
     }
 
     public void buy() {
+        System.out.println("Follow the list with goods and add it to the basket. Don't forget to pay at the checkout");
     }
 
     public void prepareDinner() {
+        checkWater();
+        addSalt();
+        boilWater();
+        getPotato();
+        cutPotato();
+        getEgg();
+        getMeet();
+        getPasta();
+        getTomato();
+        prepareTeaCup();
     }
 
     public void checkWater() {
+        System.out.println("There is a water inside.");
     }
 
     public void addSalt() {
+        System.out.println("Add salt as was described in the recipe");
     }
 
     public void addSugar() {
+        System.out.println("Add 2 spoons of sugar to each cup");
     }
 
     public void cutPotato() {
+        System.out.println("Cut the potatoes into 6 parts");
     }
 
     public void grindCoffee() {
+        System.out.println("Grin your coffe");
     }
 
     public void selectBread() {
+        System.out.println("Select fresh bread");
+    }
+
+    public void boilWater(){
+        System.out.println("Water is 100 C");
     }
     //my methods finished
 

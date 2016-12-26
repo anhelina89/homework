@@ -24,10 +24,15 @@ public class MobilePhone extends TouchScreenDevices {
 
     //new methods
     private void takeCall() {
+        System.out.println("check the ability to make a call");
     }
-    private String takeMsg(String msg) {
-        return msg;
+    private void takeMsg(boolean msg) {
+        if (msg==true){
+            System.out.println("msg was recieved on this devise");
+        }
+        else System.out.println("There is no msg on this devise");
     }
+
     private void checkPhoneForTourist(){
         System.out.println("Mobile for tourists should have following charachteristics:");
     }

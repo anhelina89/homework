@@ -4,6 +4,15 @@ package homework.lesson1.part2;
  * Created by apodushkina on 15.12.2016.
  */
 public class Applications {
+    public static void main(String[] args) {
+        Applications app = new Applications();
+        app.start();
+        app.showData();
+        app.setAutoInstallation(true);
+        app.update();
+        app.stop();
+
+    }
 
     private boolean autoInstallation;
     private boolean simpleDeinstallation;
@@ -27,12 +36,15 @@ public class Applications {
     }
 
     private void stop() {
+        System.out.println("The app was stopped and closed!");
     }
 
     private void update() {
+        System.out.println("The app was updated to the latest version");
     }
 
     private void showData() {
+        System.out.println("This is data of current app");
     }
     // methods finished
 

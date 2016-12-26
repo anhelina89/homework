@@ -4,6 +4,14 @@ package homework.lesson1.part2;
  * Created by apodushkina on 15.12.2016.
  */
 public class MusicInstruments {
+    public static void main(String[] args) {
+        MusicInstruments mi = new MusicInstruments();
+        mi.startPlay();
+        mi.startPlay();
+        mi.repare();
+        mi.checkPortability();
+
+    }
 
     private String type;
     private boolean portability;
@@ -17,6 +25,31 @@ public class MusicInstruments {
     private int age;
 
     //methods started
+    public void startPlay(){
+        System.out.println("Turn the instrument on and play music");
+    }
+    public void stop(){
+        System.out.println("Stop playing music and turn the instrument off");
+    }
+    public void repare(){
+        System.out.println("Be sure that the details can be substituted");
+        setAbleToAdjust(false); //default value
+        if (isAbleToAdjust()){
+            System.out.println("can be adjusted/repared");
+        }
+        else{
+            System.out.println("is a disposable instrument");
+        }
+    }
+     public void checkPortability(){
+         if (portability==true){
+             System.out.println("This music instrument is portable");
+         }
+         else{
+             System.out.println("This musicc instrument is fixed");
+         }
+     }
+
     // methods finished
 
     //getters started

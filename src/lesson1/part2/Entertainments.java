@@ -4,6 +4,16 @@ package homework.lesson1.part2;
  * Created by apodushkina on 15.12.2016.
  */
 public class Entertainments {
+    public static void main(String[] args) {
+        Entertainments en = new Entertainments();
+        en.countIncome();
+        en.checkAbleLocation();
+        en.checkSecurity();
+        en.selectTargetPeople();
+        en.getNumOfPeopleInvolved();
+        en.approveOriginCountry();
+        en.calculateFun();
+    }
 
     public String type; // active or not
     public String targetGroup; //old, middle,
@@ -18,33 +28,45 @@ public class Entertainments {
 
     //methods started
     public void playGame() {
+        System.out.println("select particular game and follow the rools");
     }
 
     public void playMusic() {
+        System.out.println("select instrument and play");
     }
 
     public void selectTargetPeople() {
+        System.out.println("Chose only target zone");
     }
 
     public void checkSecurity() {
+        System.out.println("Be sure that entertainment is secure");
     }
 
     public void checkAbleLocation() {
+        System.out.println("Check location and be sure that it is suitable and safe for particular entertaiment");
     }
 
     public void invitePeople() {
+        selectTargetPeople();
+        System.out.println("send an inviatation emails to target people");
     }
 
     public void approveOriginCountry() {
+        System.out.println("Check the origin country to be aware about root-causes of this event");
     }
 
     public void countWidespread() {
+        checkAbleLocation();
+        System.out.println("Be sure that it is a common entertainment in the particular location");
     }
 
     public void countIncome() {
+        System.out.println("Check the payback of events");
     }
 
     public void calculateFun() {
+        System.out.println("Check that people a glad to visit this event next time");
     }
 
 

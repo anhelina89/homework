@@ -4,6 +4,14 @@ package homework.lesson1.part2;
  * Created by apodushkina on 15.12.2016.
  */
 public class Languages {
+    public static void main(String[] args) {
+        Languages lng = new Languages();
+        lng.checkIsNotExtinct(100);//default value
+        lng.checkSpellingAbility();
+        lng.getUsedInTheWorld();
+        lng.estimateHardnessToLearn();
+        lng.estimateGrammar();
+    }
 
 
     private int averegeNumofWords;
@@ -18,33 +26,52 @@ public class Languages {
 
     //methods started
     public void countWord() {
+        System.out.println("Count/check/find in the Internet how many words is in the particular language as average number");
+        getAveregeNumofWords();
     }
 
     public void checkUsageInWorld() {
+        System.out.println("Check how many words is enough for ordinary well-educated persone");
+        getUsedInTheWorld();
     }
 
     public void estimateHardnessToLearn() {
+        System.out.println("Estimate how is it difficult to learn this particular language. Compare with Engkish");
+        getDifficultyByGrammar();
     }
 
     public void estimateGrammar() {
+        System.out.println("Estimate how is it difficult to the grammar of this particular language. Compare with Engkish");
+        getDifficultyByGrammar();
     }
 
     public void checkSpellingAbility() {
+        System.out.println("Is it possible to spell all words like in English");
+        isSpelling();
     }
 
-    public void checkIsNotExtinct() {
-    }
+    public void checkIsNotExtinct(int numOfPeople) {
+        System.out.println("Check how many people are using this language in the world");
+        if (numOfPeople>1000) {
+            allive = true;
+        }    else{
+            System.out.println("language dies out");
+
+            }
+        }
+
 
     public void countSinonims() {
+        System.out.println("collect the words with the same/similar meanings and count the average num");
     }
 
-    public void checkFilmSubtitels() {
-    }
 
     public void findFairyTailsOnLanguage() {
+        System.out.println("Check that there are a lot of old and new fairy tails that were written on this language");
     }
 
     public void checkSchoolsTeaching() {
+        System.out.println("Check the number of schools that use this language as native");
     }
 
 

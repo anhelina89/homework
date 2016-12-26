@@ -2,8 +2,11 @@ package homework.lesson1.part2;
 
 /**
  * Created by apodushkina on 15.12.2016.
+ *  *Error:(11, 28) java: main(java.lang.String[]) in homework.lesson1.part3.QAspecialist cannot override main(java.lang.String[]) in homework.lesson1.part2.WorkerOfCompany
+ overridden method does not throw java.io.IOException
  */
 public class WorkerOfCompany {
+
     private boolean politeness;
     private boolean responsibility;
     private boolean responsiveness;
@@ -21,30 +24,35 @@ public class WorkerOfCompany {
     }
 
     public void beResponsible() {
+        System.out.println("Each employee has to be responsible for his/her tasks");
     }
 
     public void beResponsive() {
+        System.out.println("Responsive persone is very valuable in the team");
     }
 
     public void countPerformanceAtWork() {
+        System.out.println("Devide hours/day that this person work in average on 8 and then multiply on 100 to recieve xx.xx%");
     }
 
     public void estimateMindAbility() {
+        System.out.println("Make an estiamtion based on the approaches that employee has used in the hard task solving");
     }
 
     public void estimateFlexibility() {
+        System.out.println("Is worker can change his/her timetable?");
     }
 
-    public void elfLearningPersentage() {
-    }
-
-    public void tesFriendliness() {
+    public void selfLearningPersentage() {
+        System.out.println("How much materials employee can learn his/her own?");
     }
 
     public void countMiddleAgePeople() {
+        System.out.println("Count the middle age of your employees ");
     }
 
     public void countMen() {
+        System.out.println("Count how mnay people do you have in the company/office/project");
     }
     //my methods finished
 

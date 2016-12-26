@@ -29,13 +29,25 @@ public class Tablet extends TouchScreenDevices {
     private boolean ableToPhone;
     private int rechargeSpead;
     private String photoProgrammProfessional;
-    private boolean newPhotos=false;
+    private boolean newPhotos;
 
     //new methods
-    private void readBook(){}
-    private void useNotePad(){}
-    private void useGPS(){}
-    public void sendPhoto(){}
+    private void readBook(){
+        System.out.println("Check that user can open books in pdf,doc foramts");
+    }
+    private void useNotePad(){
+        System.out.println("Check that NotePad is installed and user can open/write/edit/delete/save text from it");
+    }
+    private void useGPS(){
+        System.out.println("Open GPS and test that it shows your location correctly");
+    }
+    public void sendPhoto() {
+        if (isNewPhotos() == true) {
+            System.out.println("Send photo to another devise and check that it was recieved successfully");
+        } else {
+            System.out.println("You cannot send photo because you don't have new one");
+        }
+    }
     public void synchronizeData(){
         if (newPhotos==true){
             sendPhoto();
@@ -43,6 +55,12 @@ public class Tablet extends TouchScreenDevices {
         else{
             System.out.println("You don't have any mew photo");
         }
+    }
+    public void setNewPhotos(boolean newPhotos) {
+        this.newPhotos = newPhotos;
+    }
+    public boolean isNewPhotos() {
+        return newPhotos;
     }
 
     @Override
