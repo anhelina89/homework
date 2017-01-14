@@ -68,7 +68,7 @@ public class Entertainments {
     }
 
     public void calculateFun() {
-        System.out.println("Check that people a glad to visit this event next time");
+        System.out.println("Check that people are glad to visit this event next time");
     }
 
 
