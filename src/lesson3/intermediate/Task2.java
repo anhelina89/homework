@@ -8,18 +8,23 @@ public class Task2 {
         int num;
         int[] mas = new int[6];
         int n=0;
+        int amount=0;
+        //int f=123321;
 
-        for (num=001000; num<1000000; num++) {
+        for (num=001000; num<=001002; num++) {
 
             for (int i=0;i<6; i++) {
-                int f=(num % 10);
+                 n=(num % 10);
                 num = num / 10;
-                mas[i]=f;
+                mas[i]=n;
             }
+            System.out.println(mas[0]+mas[1]);
             if ((mas[0]+mas[1]+mas[2])==(mas[3]+mas[4]+mas[5])){
-                n++;
+               amount++;
+                System.out.println(num);
             }
+
         }
-        System.out.println("Lucky ticket was found: "+n);
+        System.out.println(amount);
     }
 }
