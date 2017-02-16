@@ -5,26 +5,28 @@ package lesson3.intermediate;
  */
 public class Task2 {
     public static void main(String[] args) {
-        int num;
-        int[] mas = new int[6];
-        int n=0;
-        int amount=0;
-        //int f=123321;
+        Task2 t2 = new Task2();
+        System.out.println("Number of lucky ticckets = " + t2.luckyTickets());
+    }
+    int amount = 0;
 
-        for (num=001000; num<=001002; num++) {
+    public int luckyTickets() {
+        System.out.println("Lucky tickets. As you may know tram tickets have numbering in the range from 000 001 to 999 999.\n" +
+                "Many people try to find a lucky ticket, where the sum of the first three digits = the sum of the second\n" +
+                "three digits. For example, 205 151 is a lucky ticket. Write a program for calculating of how many lucky\n" +
+                "tickets people can find in the one roll\n");
+        for (int num = 1001; num < 10000000; num++) {
 
-            for (int i=0;i<6; i++) {
-                 n=(num % 10);
-                num = num / 10;
-                mas[i]=n;
+            int i1 = num / 100000 % 10,
+                    i2 = num / 10000 % 10,
+                    i3 = num / 1000 % 10,
+                    i4 = num / 100 % 10,
+                    i5 = num / 10 % 10,
+                    i6 = num % 10;
+            if ((i1 + i2 + i3) == (i4 + i5 + i6)) {
+                amount++;
             }
-            System.out.println(mas[0]+mas[1]);
-            if ((mas[0]+mas[1]+mas[2])==(mas[3]+mas[4]+mas[5])){
-               amount++;
-                System.out.println(num);
-            }
-
         }
-        System.out.println(amount);
+        return amount;
     }
 }

@@ -5,16 +5,20 @@ package lesson3.preIntermediate;
  */
 public class Task1 {
     public static void main(String[] args) {
+        Task1 t1 = new Task1();
+        System.out.println("Couple went to the cinema? - " + t1.goCinema());
+    }
 
+    boolean heSmile = false;
+    boolean sheSmile = false;
 
-        boolean heSmile = false;
-        boolean sheSmile = false;
-
+    public String goCinema() {
+        String result;
         if (heSmile == sheSmile) {
-            System.out.println(true);
+            result = "YES";
+        } else {
+            result = "NO";
         }
-        else {
-            System.out.println(false);
-        }
+        return result;
     }
 }

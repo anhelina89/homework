@@ -5,7 +5,15 @@ package lesson3.begginer;
  */
 public class Task5 {
     public static void main(String[] args) {
-        int mark = 5;
+        System.out.println("There are several marks in the school: from 1 to 5 (the highest). Create a method (program) \n" +
+                "which takes a mark and return your result (for ex. \"Excellent\", \"Good\", \"Failed\" etc.). Please do \n" +
+                "not use if...else condition\n");
+        Task5 t5 = new Task5();
+        t5.markToText(5);
+    }
+
+    public void markToText(int mark) {
+        System.out.print("Your mark is - "+ mark+" = ");
 
         switch (mark) {
             case 1:

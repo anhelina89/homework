@@ -5,18 +5,24 @@ package lesson3.preIntermediate;
  */
 public class Task8 {
     public static void main(String[] args) {
-        long a = 0;
-        long b = 1;
-        long fib = a+b;
-        int maxElement=100;
-        int currentNum=2;
+        Task8 t8 = new Task8();
+        t8.fibonacci();
+    }
 
-        while (currentNum<=maxElement){
-            a=b;
-            b=fib;
-            fib=a+b;
+    public void fibonacci() {
+        System.out.println("Write a method which calculates a sum of first 100 odd elements of Fibonacci sequence");
+        double a = 0;
+        double b = 1;
+        double fib = a + b;
+        int maxElement = 100;
+        int currentNum = 2;
+
+        while (currentNum <= maxElement) {
+            a = b;
+            b = fib;
+            fib = a + b;
             currentNum++;
-            if (fib%2!=0){
+            if (fib % 2 != 0) {
                 System.out.println(fib);
             }
         }
